@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "752838250123",
+    "project_id": "facential",
+    "storage_bucket": "facential.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:752838250123:android:c11767bfc3777a4b4d8e8e",
+        "android_client_info": {
+          "package_name": "com.capestone.facential"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "752838250123-h09hjekag9ijfuvn8c7a8p89h1rc3eg3.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.capestone.facential",
+            "certificate_hash": "17fd084449e8f46c31c3427582d865e6947a98dd"
+          }
+        },
+        {
+          "client_id": "752838250123-e19t2l35o2b0a8kbcp6e8p83q9qkq83t.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDESFYYxYkG7Io2AaHEOm-YHkWvFWuL90Q"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "752838250123-e19t2l35o2b0a8kbcp6e8p83q9qkq83t.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

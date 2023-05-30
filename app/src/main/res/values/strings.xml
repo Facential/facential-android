@@ -1,0 +1,31 @@
+<resources>
+    <string name="app_name">Facential</string>
+
+    <!--    Onboarding-->
+    <string name="title1">Welcome to Facential!</string>
+    <string name="description1">Start your journey to healthy and radiant skin with our app to help understand your skin type and offers personalized skincare recommendations just for you.</string>
+
+    <string name="title2">Skin Type Detection</string>
+    <string name="description2">We\'ll analyze your responses and identify your specific skin type, whether it\'s dry, oily, combination, sensitive, or normal.</string>
+
+    <string name="title3">Personalized Recommendations</string>
+    <string name="description3">Our app will generate personalized skincare recommendations just for you.</string>
+
+    <string name="title4">Routine Tracker</string>
+    <string name="description4">Keep track of your skincare routine effortlessly.</string>
+
+    <string name="title_final">Get Started</string>
+    <string name="description_final">Keep track of your skincare routine effortlessly.</string>
+
+    <string name="get_started">Get Started</string>
+
+    <!--    Login dan Register-->
+    <string name="prompt_name">Name</string>
+    <string name="prompt_email">Email</string>
+    <string name="prompt_password">Password</string>
+    <string name="action_sign_in">Sign In</string>
+    <string name="action_sign_up">Sign Up</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+</resources>
