@@ -3,7 +3,7 @@ package com.capestone.facential.data.local
 import android.content.Context
 import android.content.SharedPreferences
 
-class SharedPreferencesManager(private val context: Context) {
+    class SharedPreferencesManager(private val context: Context) {
 
     private val sharedPreferences: SharedPreferences by lazy {
         context.getSharedPreferences(FACENTIAL_PREF, Context.MODE_PRIVATE)

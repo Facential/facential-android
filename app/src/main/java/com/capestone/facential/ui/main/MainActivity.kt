@@ -9,6 +9,7 @@ import androidx.navigation.ui.AppBarConfiguration
 import com.capestone.facential.R
 import com.capestone.facential.data.local.SharedPreferencesManager
 import com.capestone.facential.databinding.ActivityMainBinding
+import com.capestone.facential.ui.camera.CameraActivity
 import com.capestone.facential.ui.onboarding.OnboardingActivity
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.ktx.auth

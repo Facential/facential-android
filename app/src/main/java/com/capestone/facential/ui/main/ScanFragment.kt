@@ -8,6 +8,7 @@ import android.view.View
 import android.view.ViewGroup
 import com.capestone.facential.databinding.FragmentScanBinding
 import com.capestone.facential.ui.camera.CameraActivity
+import com.capestone.facential.ui.camera.ConfirmActivity
 
 class ScanFragment : Fragment() {
 
@@ -24,7 +25,7 @@ class ScanFragment : Fragment() {
         val view = binding.root
 
         binding.btnToCamera.setOnClickListener {
-            val intent = Intent(requireContext(), CameraActivity::class.java)
+            val intent = Intent(requireContext(), ConfirmActivity::class.java)
             startActivity(intent)
         }
 

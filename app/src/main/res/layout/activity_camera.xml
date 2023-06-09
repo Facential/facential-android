@@ -22,16 +22,6 @@
         app:srcCompat="@drawable/ic_camera" />
 
     <ImageView
-        android:id="@+id/switchCamera"
-        android:layout_width="40dp"
-        android:layout_height="40dp"
-        app:layout_constraintBottom_toBottomOf="@+id/captureImage"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/captureImage"
-        app:layout_constraintTop_toTopOf="@+id/captureImage"
-        app:srcCompat="@drawable/ic_switch_camera" />
-
-    <ImageView
         android:id="@+id/btn_back"
         android:layout_width="40dp"
         android:layout_height="40dp"

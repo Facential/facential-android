@@ -2,10 +2,14 @@ package com.capestone.facential.ui.main
 
 import android.content.Intent
 import android.os.Bundle
+import android.util.Log
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import com.bumptech.glide.Glide
+import com.bumptech.glide.request.RequestOptions
+import com.capestone.facential.R
 import com.capestone.facential.databinding.FragmentHomeBinding
 import com.capestone.facential.ui.auth.LoginActivity
 import com.google.firebase.auth.FirebaseAuth
@@ -33,18 +37,10 @@ class HomeFragment : Fragment() {
 
         val userName = currentUser?.displayName
         val firstName = userName?.split(" ")?.getOrNull(0)
-        binding.tvHello.text = "Hello, $firstName"
+        binding.tvHello.text = "Hi $firstName!"
 
-
-        binding.btnLogout.setOnClickListener {
-            signOut()
-        }
         return view
     }
 
-    private fun signOut() {
-        auth.signOut()
-        startActivity(Intent(requireActivity(), LoginActivity::class.java))
-        requireActivity().finish()
-    }
+
 }
