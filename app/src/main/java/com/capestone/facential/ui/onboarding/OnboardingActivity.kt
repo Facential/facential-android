@@ -34,22 +34,22 @@ class OnboardingActivity : AppCompatActivity() {
         onboardingItemAdapter = OnboardingItemsAdapter(
             listOf(
                 OnboardingItem(
-                    onboardingImage = R.drawable.ic_launcher_foreground,
+                    onboardingImage = R.drawable.onboarding_welcome,
                     title = getString(R.string.title1),
                     description = getString(R.string.description1)
                 ),
                 OnboardingItem(
-                    onboardingImage = R.drawable.ic_launcher_foreground,
+                    onboardingImage = R.drawable.onboarding_1,
                     title = getString(R.string.title2),
                     description = getString(R.string.description2)
                 ),
                 OnboardingItem(
-                    onboardingImage = R.drawable.ic_launcher_foreground,
+                    onboardingImage = R.drawable.onboarding_2,
                     title = getString(R.string.title3),
                     description = getString(R.string.description3)
                 ),
                 OnboardingItem(
-                    onboardingImage = R.drawable.ic_launcher_foreground,
+                    onboardingImage = R.drawable.onboarding_3,
                     title = getString(R.string.title4),
                     description = getString(R.string.description4)
                 ),

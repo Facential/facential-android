@@ -11,4 +11,8 @@
     <color name="blue_1">#525D9E</color>
     <color name="blue_2">#819BE9</color>
     <color name="cream">#FBF7EA</color>
+    <color name="grey">#838383</color>
+
+
+    <color name="red">#FF0000</color>
 </resources>

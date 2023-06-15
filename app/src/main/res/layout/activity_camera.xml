@@ -12,6 +12,16 @@
         android:layout_height="match_parent" />
 
     <ImageView
+        android:id="@+id/iv_frame"
+        android:layout_width="500dp"
+        android:layout_height="500dp"
+        android:src="@drawable/face_frame_no_bg"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
         android:id="@+id/captureImage"
         android:layout_width="60dp"
         android:layout_height="60dp"

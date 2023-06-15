@@ -17,6 +17,7 @@ import androidx.camera.lifecycle.ProcessCameraProvider
 import androidx.core.app.ActivityCompat
 import androidx.core.content.ContextCompat
 import com.capestone.facential.databinding.ActivityCameraBinding
+import com.capestone.facential.ui.main.ScanFragment
 import com.capestone.facential.utils.createFile
 import java.io.File
 
@@ -97,7 +98,7 @@ class CameraActivity : AppCompatActivity() {
                         "isBackCamera",
                         cameraSelector == CameraSelector.DEFAULT_BACK_CAMERA
                     )
-                    setResult(ConfirmActivity.CAMERA_X_RESULT, intent)
+                    setResult(ScanFragment.CAMERA_X_RESULT, intent)
                     finish()
                 }
 
@@ -143,12 +144,5 @@ class CameraActivity : AppCompatActivity() {
                 ).show()
             }
         }, ContextCompat.getMainExecutor(this))
-    }
-
-
-    private fun navigateToConfirmActivity(imageUri: Uri) {
-        val intent = Intent(this, ConfirmActivity::class.java)
-        intent.putExtra("captured_image_uri", imageUri.toString())
-        startActivity(intent)
     }
 }

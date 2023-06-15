@@ -5,6 +5,7 @@ import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
+import android.view.View
 import android.widget.Toast
 import androidx.activity.result.contract.ActivityResultContracts
 import com.capestone.facential.R
@@ -56,7 +57,17 @@ class LoginActivity : AppCompatActivity() {
         binding.btnLoginSubmit.setOnClickListener {
             val email = binding.edLoginEmail.text.toString()
             val password = binding.edLoginPassword.text.toString()
-            loginEmail(email, password)
+
+            if (email.isNotEmpty() && password.isNotEmpty()) {
+                loginEmail(email, password)
+                isLoading(true)
+            } else if (email.isNullOrEmpty()) {
+                Toast.makeText(this, "Please type your email", Toast.LENGTH_SHORT).show()
+                isLoading(false)
+            } else {
+                Toast.makeText(this, "Please type your password", Toast.LENGTH_SHORT).show()
+                isLoading(false)
+            }
         }
 
         binding.btnLoginGoogle.setOnClickListener {
@@ -68,6 +79,22 @@ class LoginActivity : AppCompatActivity() {
         }
     }
 
+    private fun isLoading(showLoading: Boolean) {
+        if (showLoading) {
+            binding.btnLoginSubmit.visibility = View.INVISIBLE
+            binding.pbLoading.visibility = View.VISIBLE
+            binding.navLayout.visibility = View.INVISIBLE
+            binding.tvOr.visibility = View.INVISIBLE
+            binding.btnLoginGoogle.visibility = View.INVISIBLE
+        } else {
+            binding.btnLoginSubmit.visibility = View.VISIBLE
+            binding.pbLoading.visibility = View.INVISIBLE
+            binding.navLayout.visibility = View.VISIBLE
+            binding.tvOr.visibility = View.VISIBLE
+            binding.btnLoginGoogle.visibility = View.VISIBLE
+        }
+    }
+
     private fun loginEmail(email: String, password: String) {
         auth.signInWithEmailAndPassword(email, password)
             .addOnCompleteListener(this) { task ->
@@ -75,8 +102,10 @@ class LoginActivity : AppCompatActivity() {
                     startActivity(Intent(this, MainActivity::class.java))
                     finish()
                     val user: FirebaseUser? = auth.currentUser
+                    isLoading(false)
                 } else {
                     Toast.makeText(this, "Login gagal!", Toast.LENGTH_SHORT).show()
+                    isLoading(false)
                 }
             }
     }

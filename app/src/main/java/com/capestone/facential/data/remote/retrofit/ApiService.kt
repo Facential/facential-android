@@ -1,7 +1,6 @@
 package com.capestone.facential.data.remote.retrofit
 
-import com.capestone.facential.data.remote.response.ClassifyResponse
-import com.capestone.facential.data.remote.response.ResultResponse
+import com.capestone.facential.data.remote.response.*
 import okhttp3.MultipartBody
 import okhttp3.RequestBody
 import retrofit2.Call
@@ -15,8 +14,37 @@ interface ApiService {
         @Part file: MultipartBody.Part
     ) : Call<ClassifyResponse>
 
-    @GET("classification_results/{userId}")
-    fun getResult(
+    @GET("getdata/{userId}/latest")
+    fun getLatest(
         @Path("userId") userId: String
     ) : Call<ResultResponse>
+
+    @GET("getdata/{userId}/{id}")
+    fun getHistoryId(
+        @Path("userId") userId: String,
+        @Path("id") id: Int
+    ) : Call<ResultResponse>
+
+    @GET("getdata/{userId}")
+    fun getHistory(
+        @Path("userId") userId: String
+    ) : Call<HistoryResponse>
+
+    @DELETE("delete/{userId}")
+    fun deleteAll(
+        @Path("userId") userId: String
+    ) : Call<DeleteResponse>
+
+    @DELETE("delete/{userId}/{id}")
+    fun deleteId(
+        @Path("userId") userId: String,
+        @Path("id") id: Int
+    ) : Call<DeleteResponse>
+
+    @Multipart
+    @POST("recommendation")
+    fun getRecommendation(
+        @Part("latitude") lat: RequestBody,
+        @Part("longitude")  lon: RequestBody
+    ) : Call<RecommendationResponse>
 }
