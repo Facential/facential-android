@@ -1,3 +1,7 @@
+![Facential Logo](facential_logo.jpg)
+![Facential On-Boarding](facential_onboarding.jpg)
+![Facential UI](facential_ui.jpg)
+
 # Library
 Registration and login: The library provides functionalities for user registration and login, including integration with Firebase authentication.
 Image capture: Utilizes the CameraX library to capture images within the application.
