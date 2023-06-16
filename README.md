@@ -1,7 +1,4 @@
-Android Library Readme
-This Android library provides a set of useful features and dependencies for building a mobile application. It simplifies common tasks such as registration, login, image capture, machine learning model integration, and skincare product recommendations. The library leverages various popular frameworks and libraries to streamline development and enhance user experience.
-
-Features
+# Library
 Registration and login: The library provides functionalities for user registration and login, including integration with Firebase authentication.
 Image capture: Utilizes the CameraX library to capture images within the application.
 Backend integration: Facilitates communication with the backend server to send captured images for analysis using a deployed machine learning model.
